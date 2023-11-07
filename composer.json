@@ -1,5 +1,5 @@
 {
-  "name": "openspout/easy-excel",
+  "name": "dahuicyh/easy-excel",
   "description": "使用简单实用的语义化接口快速读写Excel文件",
   "type": "library",
   "keywords": [
@@ -18,8 +18,8 @@
   "homepage": "https://github.com/jqhph/easy-excel",
   "authors": [
     {
-      "name": "jqh",
-      "email": "841324345@qq.com"
+      "name": "dahuilang",
+      "email": "dahuicyh@qq.com"
     }
   ],
   "require": {
