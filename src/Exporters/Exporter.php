@@ -12,7 +12,7 @@ use Dcat\EasyExcel\Traits\Excel;
 /**
  * Class Importer.
  *
- * @author jqh <841324345@qq.com>
+ *
  */
 class Exporter implements Contracts\Exporter
 {

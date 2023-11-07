@@ -17,7 +17,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 /**
  * Class Importer.
  *
- * @author jqh <841324345@qq.com>
+ *
  */
 class Importer implements Contracts\Importer
 {
