@@ -1,5 +1,5 @@
 {
-  "name": "dcat/easy-excel",
+  "name": "openspout/easy-excel",
   "description": "使用简单实用的语义化接口快速读写Excel文件",
   "type": "library",
   "keywords": [
