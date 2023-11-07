@@ -11,7 +11,6 @@ use Dcat\EasyExcel\Contracts\Sheet as SheetInterface;
 use Dcat\EasyExcel\Support\SheetCollection;
 use Dcat\EasyExcel\Support\Traits\Macroable;
 use Dcat\EasyExcel\Traits\Excel;
-use League\Flysystem\FileNotFoundException;
 use League\Flysystem\FilesystemException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
@@ -69,7 +68,7 @@ class Importer implements Contracts\Importer
     /**
      * @return Contracts\Sheets
      *
-     * @throws FileNotFoundException|FilesystemException
+     * @throws FilesystemException
      * @throws IOException
      * @throws UnsupportedTypeException
      */
@@ -98,7 +97,6 @@ class Importer implements Contracts\Importer
      * @param  int|string  $indexOrName
      * @return Contracts\Sheet
      *
-     * @throws FileNotFoundException
      * @throws IOException
      * @throws UnsupportedTypeException
      */
@@ -110,7 +108,6 @@ class Importer implements Contracts\Importer
     /**
      * @return array
      *
-     * @throws FileNotFoundException
      * @throws IOException
      * @throws UnsupportedTypeException
      */
@@ -122,7 +119,6 @@ class Importer implements Contracts\Importer
     /**
      * @return SheetCollection
      *
-     * @throws FileNotFoundException
      * @throws IOException
      * @throws UnsupportedTypeException
      */
@@ -135,7 +131,6 @@ class Importer implements Contracts\Importer
      * @param  callable  $callback
      * @return $this
      *
-     * @throws FileNotFoundException
      * @throws IOException
      * @throws UnsupportedTypeException
      */
@@ -151,7 +146,6 @@ class Importer implements Contracts\Importer
      *
      * @return Contracts\Sheet
      *
-     * @throws FileNotFoundException
      * @throws IOException
      * @throws UnsupportedTypeException
      */
@@ -173,7 +167,6 @@ class Importer implements Contracts\Importer
      *
      * @return Contracts\Sheet
      *
-     * @throws FileNotFoundException
      * @throws IOException
      * @throws UnsupportedTypeException
      * @throws UnsupportedTypeException

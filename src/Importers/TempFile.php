@@ -2,9 +2,7 @@
 
 namespace Dcat\EasyExcel\Importers;
 
-use League\Flysystem\FileNotFoundException;
 use League\Flysystem\FilesystemException;
-use League\Flysystem\FilesystemInterface;
 use League\Flysystem\FilesystemOperator;
 
 trait TempFile
@@ -14,11 +12,11 @@ trait TempFile
     protected $tempFile;
 
     /**
-     * @param  FilesystemInterface|FilesystemOperator  $filesystem
+     * @param  FilesystemOperator  $filesystem
      * @param  string  $filePath
      * @return string
      *
-     * @throws FileNotFoundException|FilesystemException
+     * @throws FilesystemException
      */
     public function moveFileToTemp($filesystem, string $filePath)
     {

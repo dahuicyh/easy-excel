@@ -93,4 +93,9 @@ class NullSheet implements Contracts\Sheet
     {
         return new SheetCollection($this->toArray());
     }
+
+    public function getOriginalHeadings()
+    {
+        // TODO: Implement getOriginalHeadings() method.
+    }
 }

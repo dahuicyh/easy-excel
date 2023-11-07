@@ -27,7 +27,6 @@ trait Exporter
      *
      * @throws \OpenSpout\Common\Exception\IOException
      * @throws \OpenSpout\Common\Exception\UnsupportedTypeException
-     * @throws \League\Flysystem\FileNotFoundException
      */
     protected function assertSheets($storePath, $users1, $users2)
     {

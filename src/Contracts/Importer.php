@@ -5,7 +5,6 @@ namespace Dcat\EasyExcel\Contracts;
 use OpenSpout\Common\Exception\IOException;
 use OpenSpout\Common\Exception\UnsupportedTypeException;
 use Dcat\EasyExcel\Support\SheetCollection;
-use League\Flysystem\FileNotFoundException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 interface Importer extends Excel
@@ -25,7 +24,6 @@ interface Importer extends Excel
     /**
      * @return Sheets
      *
-     * @throws FileNotFoundException
      * @throws IOException
      * @throws UnsupportedTypeException
      */
@@ -37,7 +35,6 @@ interface Importer extends Excel
      * @param  int|string  $indexOrName
      * @return Sheet
      *
-     * @throws FileNotFoundException
      * @throws IOException
      * @throws UnsupportedTypeException
      */
@@ -47,7 +44,6 @@ interface Importer extends Excel
      * @param  callable  $callback
      * @return $this
      *
-     * @throws FileNotFoundException
      * @throws IOException
      * @throws UnsupportedTypeException
      */
@@ -58,7 +54,6 @@ interface Importer extends Excel
      *
      * @return Sheet
      *
-     * @throws FileNotFoundException
      * @throws IOException
      * @throws UnsupportedTypeException
      */
@@ -69,7 +64,6 @@ interface Importer extends Excel
      *
      * @return Sheet
      *
-     * @throws FileNotFoundException
      * @throws IOException
      * @throws UnsupportedTypeException
      */
@@ -78,7 +72,6 @@ interface Importer extends Excel
     /**
      * @return array
      *
-     * @throws FileNotFoundException
      * @throws IOException
      * @throws UnsupportedTypeException
      */
@@ -87,7 +80,6 @@ interface Importer extends Excel
     /**
      * @return SheetCollection
      *
-     * @throws FileNotFoundException
      * @throws IOException
      * @throws UnsupportedTypeException
      */

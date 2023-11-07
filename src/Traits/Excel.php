@@ -9,7 +9,6 @@ use OpenSpout\Writer\CSV\Writer as CSVWriter;
 use Dcat\EasyExcel\Support\SheetCollection;
 use Illuminate\Contracts\Filesystem\Filesystem as LaravelFilesystem;
 use Illuminate\Support\Facades\Storage;
-use League\Flysystem\FilesystemInterface;
 use League\Flysystem\FilesystemOperator;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
@@ -36,7 +35,7 @@ trait Excel
     protected $headingStyle;
 
     /**
-     * @var FilesystemInterface|FilesystemOperator
+     * @var FilesystemOperator
      */
     protected $filesystem;
 
@@ -82,7 +81,8 @@ trait Excel
             $temp = $headings();
 
             if (is_array($temp) && is_array(current($temp))) {
-                $headings = &$temp[0] ?? null;
+                $var = $temp[0] ?? null;
+                $headings = &$var;
                 $style = $temp[1] ?? null;
 
                 if ($style instanceof Style) {
@@ -143,7 +143,7 @@ trait Excel
     }
 
     /**
-     * @param  FilesystemInterface|FilesystemOperator|LaravelFilesystem|string  $filesystem
+     * @param  FilesystemOperator|LaravelFilesystem|string  $filesystem
      * @return $this
      */
     public function disk($filesystem)
@@ -162,15 +162,14 @@ trait Excel
     }
 
     /**
-     * @return FilesystemInterface|void
+     * @return void
      */
     protected function filesystem()
     {
         if (
             $this->filesystem
             && (
-                $this->filesystem instanceof FilesystemInterface
-                || $this->filesystem instanceof FilesystemOperator
+                $this->filesystem instanceof FilesystemOperator
             )
         ) {
             return $this->filesystem;
